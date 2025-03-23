@@ -44,14 +44,14 @@ const supportItems = [
 export default function Header() {
   const pathname = usePathname();
   const [currentPath, setCurrentPath] = useState(pathname);
-  const [isHovered, setIsHovered] = useState(false); // Состояние для отслеживания наведения
+  const [isHovered, setIsHovered] = useState(false);
   const [hoveredItem, setHoveredItem] = useState("catalog");
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     setCurrentPath(pathname);
   }, [pathname]);
 
-  // Функция для отображения элементов в зависимости от наведения
   const renderItems = () => {
     switch (hoveredItem) {
       case "catalog":
@@ -85,32 +85,87 @@ export default function Header() {
 
   return (
     <header className="relative">
-      <div className="bg-[#0a0c11] text-white flex items-center justify-center w-full gap-10">
-        <div className="flex items-center gap-10">
+      {/* Мобильная версия */}
+      <div className="lg:hidden flex items-center justify-between px-4 h-16 bg-[#0a0c11]">
+        <button
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          className="p-2"
+        >
+          <Image src={img.menu} alt="Menu" width={24} height={24} />
+        </button>
+        <Link href="/">
+          <Image src={img.logo} alt="Logo" width={120} height={50} priority />
+        </Link>
+        <div className="flex items-center gap-4">
+          <Link href="/shoppingBag">
+            <Image src={img.shoppingBag} alt="Shopping Bag" width={24} height={24} />
+          </Link>
+          <Link href="/profile">
+            <Image src={img.profile} alt="Profile" width={24} height={24} />
+          </Link>
+        </div>
+      </div>
+
+      {/* Мобильное меню */}
+      {isMobileMenuOpen && (
+        <div className="lg:hidden text-white bg-[#0a0c11] border-t border-gray-800">
+          <div className="px-4 py-6 space-y-4">
+            <div className="flex items-center border border-white rounded-full px-4 py-2">
+              <input
+                type="text"
+                placeholder="Поиск"
+                className="bg-transparent outline-none text-white placeholder:text-gray-400 flex-1"
+              />
+              <Image src={img.search} alt="Search" width={20} height={20} />
+            </div>
+            <nav className="space-y-4">
+              <Link href="/catalog" className="block py-2 hover:text-[#f59b00] transition-colors">
+                Каталог
+              </Link>
+              <Link href="/showroom" className="block py-2 hover:text-[#f59b00] transition-colors">
+                Шоурум
+              </Link>
+              <Link href="/support" className="block py-2 hover:text-[#f59b00] transition-colors">
+                Поддержка
+              </Link>
+            </nav>
+            <div className="flex items-center gap-4 py-4">
+              <Link href="">
+                <Image src={img.tg} alt="Telegram" width={26} height={26} />
+              </Link>
+              <Link href="">
+                <Image src={img.wa} alt="WhatsApp" width={26} height={26} />
+              </Link>
+              <p className="text-sm">+7(000)000-00-00</p>
+            </div>
+          </div>
+        </div>
+      )}
+      {/* Десктопная версия */}
+      <div className="hidden text-white lg:flex items-center justify-center h-24 min-[1300px]:gap-10 gap-4 bg-[#0a0c11]">
+        <div className="flex  items-center gap-10">
           <Link href="/">
             <Image src={img.logo} alt="Logo" width={163} height={70} />
           </Link>
           <div
-            className="flex relative items-center justify-evenly font-medium text-xl gap-10 h-24"
+            className="flex relative items-center justify-evenly font-medium min-[1300px]:text-xl text-lg min-[1300px]:gap-10 gap-8 h-24"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => {
-              // Не сбрасываем isHovered, если мышь перешла в нижний контейнер
               if (!document.querySelector(".bottom-container")?.matches(":hover")) {
                 setIsHovered(false);
-                setHoveredItem("catalog"); // Возвращаем начальное значение
+                setHoveredItem("catalog");
               }
             }}
           >
-            
             <div className="relative">
               <Link
                 href="/catalog"
                 className={`flex items-center gap-2 ${
                   currentPath === "/catalog" ? styles.active : ""
                 }`}
-                onMouseEnter={() => setHoveredItem("catalog")} // Устанавливаем состояние при наведении
+                onMouseEnter={() => setHoveredItem("catalog")}
               >
-                <Image src={img.menu} alt="Logo" width={26} height={26} />
+                <Image src={img.menu} alt="Menu" width={26} height={26} />
                 <p>Каталог</p>
               </Link>
             </div>
@@ -120,7 +175,7 @@ export default function Header() {
                 className={`${
                   currentPath === "/showroom" ? styles.active : ""
                 }`}
-                onMouseEnter={() => setHoveredItem("showroom")} // Устанавливаем состояние при наведении
+                onMouseEnter={() => setHoveredItem("showroom")}
               >
                 <p>Шоурум</p>
               </Link>
@@ -131,7 +186,7 @@ export default function Header() {
                 className={`${
                   currentPath === "/support" ? styles.active : ""
                 }`}
-                onMouseEnter={() => setHoveredItem("support")} // Устанавливаем состояние при наведении
+                onMouseEnter={() => setHoveredItem("support")}
               >
                 <p>Поддержка</p>
               </Link>
@@ -204,7 +259,7 @@ export default function Header() {
           />
           <Image src={img.search} alt="Search" width={20} height={20} />
         </div>
-        <div className="flex items-center gap-10">
+        <div className="flex items-center min-[1300px]:gap-10 gap-4">
           <Link href="/">
             <Image src={img.shoppingBag} alt="Logo" width={26} height={26} />
           </Link>
@@ -213,7 +268,7 @@ export default function Header() {
           </Link>
           <p>+7(000)000-00-00</p>
         </div>
-        <div className="flex items-center gap-10">
+        <div className="flex items-center min-[1300px]:gap-10 gap-4">
           <Link href="/">
             <Image src={img.tg} alt="Logo" width={26} height={26} />
           </Link>
@@ -222,18 +277,18 @@ export default function Header() {
           </Link>
         </div>
       </div>
-      {/* Нижний контейнер */}
+
+      {/* Нижний контейнер для десктопа */}
       <div
-        className={`bg-[#0a0c11] h-44 transition-all duration-300 bottom-container absolute left-0 right-0 top-24 ${
+        className={`bg-[#0a0c11] h-44 max-[1200px]:h-60 transition-all duration-300 bottom-container absolute left-0 right-0 top-24 ${
           isHovered ? "block" : "hidden"
         }`}
-        onMouseEnter={() => setIsHovered(true)} // Оставляем контейнер видимым, если мышь внутри
+        onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => {
           setIsHovered(false);
-          setHoveredItem("catalog"); // Возвращаем начальное значение
+          setHoveredItem("catalog");
         }}
       >
-        
       </div>
     </header>
   );

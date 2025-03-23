@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @import "tailwindcss/utilities";
 
+@theme {
+  --breakpoint-custom-xl: 1300px;
+}
+
 :root {
   --background: #292929;
   --foreground: #0A0C11;
