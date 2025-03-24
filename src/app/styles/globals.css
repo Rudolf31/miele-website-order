@@ -6,7 +6,7 @@
 }
 
 :root {
-  --background: #292929;
+  --background: #ffffff;
   --foreground: #0A0C11;
 }
 
@@ -49,9 +49,11 @@ body {
   width: 100%;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  padding: 0;
+@layer base {
+  :where(p, h1, h2, h3, h4, h5, h6) {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 a:active,
