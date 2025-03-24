@@ -3,11 +3,13 @@
 import { useState, useEffect } from 'react';
 import apiConfig from '@/assets/apiConfig';
 import Link from 'next/link';
+import styles from './Carousel.module.css';
 
 export default function Carousel() {
   const [slides, setSlides] = useState([]);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [loading, setLoading] = useState(true);
+  const [direction, setDirection] = useState('right');
 
   useEffect(() => {
     const fetchData = async () => {
@@ -26,14 +28,17 @@ export default function Carousel() {
   }, []);
 
   const goToSlide = (index) => {
+    setDirection(index > currentSlide ? 'right' : 'left');
     setCurrentSlide(index);
   };
 
   const goToPrev = () => {
+    setDirection('left');
     setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
   };
 
   const goToNext = () => {
+    setDirection('right');
     setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
   };
 
@@ -51,22 +56,31 @@ export default function Carousel() {
 
   return (
     <div className="relative h-[600px] w-full overflow-hidden">
-      {/* Фоновое изображение */}
+      {/* Фоновое изображение с анимацией */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0 transition-opacity duration-500"
+        className={`absolute inset-0 bg-cover bg-center bg-no-repeat z-0 ${
+          direction === 'right' ? styles.fadeInRight : styles.fadeInLeft
+        }`}
         style={{ backgroundImage: `url(${slides[currentSlide].image})` }}
+        key={currentSlide}
       />
 
-      {/* Контент в контейнере */}
-      <div className="container relative h-full flex flex-col justify-between py-10 z-10">
-        {/* Текст и кнопка */}
-        <div className="max-w-[50%] text-white px-4">
-            <p className="max-w-full mb-10 line-clamp-6 overflow-hidden text-ellipsis">{slides[currentSlide].text}</p>
-            <Link href={slides[currentSlide].link}>
-                <button className="px-7 min-w-40 py-2 bg-[#F59B00] hover:bg-[#F59B00]/80 text-black text-xl font-medium rounded-full transition-colors">
-                    Кнопка
-                </button>
-            </Link>
+      {/* Основной контент */}
+      <div className="  container relative h-full flex flex-col justify-between py-10 z-10">
+        {/* Текст и кнопка с анимацией */}
+        <div 
+          className={` mt-28 max-w-[50%] text-white px-4 ${
+            direction === 'right' ? styles.slideInRight : styles.slideInLeft
+          }`}
+        >
+          <p className="max-w-full mb-10 line-clamp-3 overflow-hidden text-ellipsis">
+            {slides[currentSlide].text}
+          </p>
+          <Link href={slides[currentSlide].link}>
+            <button className="px-7 min-w-40 py-2 bg-[#F59B00] hover:bg-[#F59B00]/80 text-black text-xl font-medium rounded-full transition-all duration-300 hover:scale-105">
+              Подробнее
+            </button>
+          </Link>
         </div>
 
         {/* Навигация по слайдам */}
@@ -74,8 +88,10 @@ export default function Carousel() {
           {slides.map((slide, index) => (
             <button
               key={slide.id}
-              className={`text-white/70 hover:text-white transition-colors ${
-                currentSlide === index ? 'text-white border-b-2 border-white' : ''
+              className={`text-white/70 hover:text-white transition-all duration-300 ${
+                currentSlide === index 
+                  ? 'text-white border-b-2 border-white scale-110' 
+                  : 'hover:scale-105'
               }`}
               onClick={() => goToSlide(index)}
             >
@@ -86,17 +102,17 @@ export default function Carousel() {
 
         {/* Стрелки навигации */}
         <button 
-  className="absolute min-[1300px]:top-1/3 top-1/2 min-[1300px]:-left-1/12 left-4 -translate-y-1/2 w-14 h-14 bg-black/90 text-white rounded-full flex items-center justify-center hover:bg-black/70 transition-colors"
-  onClick={goToPrev}
->
-  <span className="relative text-2xl -left-0.5">ᐸ</span> {/* Микро-корректировка */}
-</button>
-<button 
-  className="absolute min-[1300px]:top-1/3 top-1/2 min-[1300px]:-right-1/12 right-4 -translate-y-1/2 w-14 h-14 bg-black/90 text-white rounded-full flex items-center justify-center hover:bg-black/70 transition-colors"
-  onClick={goToNext}
->
-  <span className="relative text-2xl -right-0.5">ᐳ</span>
-</button>
+          className="absolute min-[1300px]:top-1/3 top-2/3 min-[1300px]:-left-1/12 left-4 -translate-y-1/2 w-14 h-14 bg-black/90 text-white rounded-full flex items-center justify-center hover:bg-black/70 transition-all duration-300 hover:scale-110"
+          onClick={goToPrev}
+        >
+          <span className="relative text-2xl -left-0.5">ᐸ</span>
+        </button>
+        <button 
+          className="absolute min-[1300px]:top-1/3 top-2/3 min-[1300px]:-right-1/12 right-4 -translate-y-1/2 w-14 h-14 bg-black/90 text-white rounded-full flex items-center justify-center hover:bg-black/70 transition-all duration-300 hover:scale-110"
+          onClick={goToNext}
+        >
+          <span className="relative text-2xl -right-0.5">ᐳ</span>
+        </button>
       </div>
     </div>
   );
