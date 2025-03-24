@@ -1,0 +1,16 @@
+[
+    { "id": 1, "type": "product", "discount": false, "novelty": true, "name": "Чайник 1", "price": 99999, "image": "/images/kettle1.png" },
+    { "id": 2, "type": "product", "discount": false, "novelty": false, "name": "Чайник 2", "price": 12999, "image": "/images/kettle2.png" },
+    { "id": 4, "type": "catalog", "link": "some/link", "title": "Чайники", "name": "Чайники", "image": "/images/kettleCatalog.png", "span": 2 },
+    { "id": 3, "type": "product", "discount": false, "novelty": false, "name": "Чайник 3", "price": 79999, "image": "/images/kettle3.png" },
+    { "id": 5, "type": "product", "discount": false, "novelty": false, "name": "Чайник 4", "price": 14999, "image": "/images/kettle4.png" },
+    { "id": 6, "type": "product", "discount": false, "novelty": false, "name": "Чайник 5", "price": 89999, "image": "/images/kettle5.png" },
+    { "id": 8, "type": "product", "discount": false, "novelty": false, "name": "Чайник 6", "price": 15999, "image": "/images/kettle6.png" },
+    { "id": 4, "type": "catalog", "link": "some/link", "title": "Кофемашины", "name": "Чайники", "image": "/images/coffeeMachineCatalog.png", "span": 2 },
+    { "id": 9, "type": "product", "discount": false, "novelty": false, "name": "Чайник 7", "price": 15999, "image": "/images/coffeeMachine1.png" },
+    { "id": 9, "type": "product", "discount": false, "novelty": false, "name": "Чайник 7", "price": 15999, "image": "/images/coffeeMachine2.png" },
+    { "id": 9, "type": "product", "discount": false, "novelty": false, "name": "Чайник 7", "price": 159999, "image": "/images/coffeeMachine3.png" },
+    { "id": 9, "type": "product", "discount": false, "novelty": false, "name": "Чайник 7", "price": 15999, "image": "/images/coffeeMachine4.png" },
+    { "id": 9, "type": "product", "discount": true, "novelty": false, "name": "Чайник 7", "price": 15999, "image": "/images/coffeeMachine5.png" },
+    { "id": 9, "type": "product", "discount": false, "novelty": false, "name": "Чайник 7", "price": 15999, "image": "/images/coffeeMachine6.png" }
+  ]

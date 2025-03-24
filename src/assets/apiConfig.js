@@ -1,4 +1,5 @@
 let host = "http://localhost:3000";
 export default {
-    getCarousel: host + "/api/getCarousel"
+    getCarousel: host + "/api/getCarousel",
+    getProductsGrid: host + "/api/getProductsGrid"
 }
