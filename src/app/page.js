@@ -2,6 +2,7 @@ import Header from "@/app/components/Header/Header";
 import Carousel from "./components/Carousel/Carousel";
 import ProductsGrid from "./components/ProductsGrid/ProductsGrid";
 import Selection from './components/Selection/Selection';
+import Footer from "./components/Footer/Footer";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
         <ProductsGrid/>
         <Selection types={['Новинки', 'Бестселлеры', 'Скидки']}  />
       </main>
+      <Footer />
     </>
   );
 }
