@@ -1,0 +1,46 @@
+{
+    "products": [
+      {
+        "id": 5,
+        "name": "Новинка 1",
+        "price": 6990,
+        "image": "/images/kettle1.png",
+        "novelty": true
+      },
+      {
+        "id": 6,
+        "name": "Новинка 2",
+        "price": 7990,
+        "image": "/images/kettle2.png",
+        "novelty": true
+      },
+      {
+        "id": 7,
+        "name": "Новинка 1",
+        "price": 6990,
+        "image": "/images/kettle1.png",
+        "novelty": true
+      },
+      {
+        "id": 8,
+        "name": "Новинка 2",
+        "price": 7990,
+        "image": "/images/kettle2.png",
+        "novelty": true
+      },
+      {
+        "id": 9,
+        "name": "Новинка 1",
+        "price": 6990,
+        "image": "/images/kettle1.png",
+        "novelty": true
+      },
+      {
+        "id": 10,
+        "name": "Новинка 2",
+        "price": 7990,
+        "image": "/images/kettle2.png",
+        "novelty": true
+      }
+    ]
+  }

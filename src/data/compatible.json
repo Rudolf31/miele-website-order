@@ -1,0 +1,16 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "Совместимый товар 1",
+        "price": 4990,
+        "image": "/images/product1.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Совместимый товар 2",
+        "price": 5990,
+        "image": "/images/product2.jpg"
+      }
+    ]
+  }

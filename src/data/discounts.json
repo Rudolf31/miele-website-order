@@ -1,0 +1,68 @@
+{
+    "products": [
+      {
+        "id": 9,
+        "name": "Товар со скидкой 1",
+        "price": 2990,
+        "originalPrice": 3990,
+        "image": "/images/coffeeMachine4.png",
+        "discount": true
+      },
+      {
+        "id": 101424124,
+        "name": "Товар со скидкой 2",
+        "price": 3990,
+        "originalPrice": 4990,
+        "image": "/images/coffeeMachine3.png",
+        "discount": true
+      },
+      {
+        "id": 119,
+        "name": "Товар со скидкой 1",
+        "price": 2990,
+        "originalPrice": 3990,
+        "image": "/images/coffeeMachine4.png",
+        "discount": true
+      },
+      {
+        "id": 12310,
+        "name": "Товар со скидкой 2",
+        "price": 3990,
+        "originalPrice": 4990,
+        "image": "/images/coffeeMachine3.png",
+        "discount": true
+      },
+      {
+        "id": 94142,
+        "name": "Товар со скидкой 1",
+        "price": 2990,
+        "originalPrice": 3990,
+        "image": "/images/coffeeMachine4.png",
+        "discount": true
+      },
+      {
+        "id": 105556,
+        "name": "Товар со скидкой 2",
+        "price": 3990,
+        "originalPrice": 4990,
+        "image": "/images/coffeeMachine3.png",
+        "discount": true
+      },
+      {
+        "id": 46469,
+        "name": "Товар со скидкой 1",
+        "price": 2990,
+        "originalPrice": 3990,
+        "image": "/images/coffeeMachine4.png",
+        "discount": true
+      },
+      {
+        "id": 10,
+        "name": "Товар со скидкой 2",
+        "price": 3990,
+        "originalPrice": 4990,
+        "image": "/images/coffeeMachine3.png",
+        "discount": true
+      }
+    ]
+  }

@@ -1,0 +1,16 @@
+{
+    "products": [
+      {
+        "id": 3,
+        "name": "Похожий товар 1",
+        "price": 3990,
+        "image": "/images/product3.jpg"
+      },
+      {
+        "id": 4,
+        "name": "Похожий товар 2",
+        "price": 4990,
+        "image": "/images/product4.jpg"
+      }
+    ]
+  }

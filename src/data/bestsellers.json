@@ -1,0 +1,64 @@
+{
+    "products": [
+      {
+        "id": 17,
+        "name": "Бестселлер 1",
+        "price": 8990,
+        "image": "/images/coffeeMachine1.png"
+      },
+      {
+        "id": 18,
+        "name": "Бестселлер 2",
+        "price": 9990,
+        "image": "/images/coffeeMachine2.png"
+      },
+      {
+        "id": 111,
+        "name": "Бестселлер 1",
+        "price": 8990,
+        "image": "/images/coffeeMachine1.png"
+      },
+      {
+        "id": 811,
+        "name": "Бестселлер 2",
+        "price": 9990,
+        "image": "/images/coffeeMachine2.png"
+      },
+      {
+        "id": 171,
+        "name": "Бестселлер 1",
+        "price": 8990,
+        "image": "/images/coffeeMachine1.png"
+      },
+      {
+        "id": 118,
+        "name": "Бестселлер 2",
+        "price": 9990,
+        "image": "/images/coffeeMachine2.png"
+      },
+      {
+        "id": 1117,
+        "name": "Бестселлер 1",
+        "price": 8990,
+        "image": "/images/coffeeMachine1.png"
+      },
+      {
+        "id": 8111,
+        "name": "Бестселлер 2",
+        "price": 9990,
+        "image": "/images/coffeeMachine2.png"
+      },
+      {
+        "id": 111237,
+        "name": "Бестселлер 1",
+        "price": 8990,
+        "image": "/images/coffeeMachine1.png"
+      },
+      {
+        "id": 83232111,
+        "name": "Бестселлер 2",
+        "price": 9990,
+        "image": "/images/coffeeMachine2.png"
+      }
+    ]
+  }
