@@ -6,5 +6,6 @@ export default {
     getSimilar: host + "/api/getSimilar",
     getNovelties: host + "/api/getNovelties",
     getBestsellers: host + "/api/getBestsellers",
-    getDiscounts: host + "/api/getDiscounts"
+    getDiscounts: host + "/api/getDiscounts",
+    getCatalogBlocks: host + "/api/getCatalogBlocks"
 }
