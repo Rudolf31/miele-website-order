@@ -106,6 +106,7 @@ export default function Header() {
         </div>
       </div>
 
+
       {/* Мобильное меню */}
       {isMobileMenuOpen && (
         <div className="lg:hidden text-white bg-[#0a0c11] border-t border-gray-800">
@@ -192,7 +193,7 @@ export default function Header() {
               </Link>
             </div>
             <div
-              className={`absolute top-full h-36 w-full text-[16px] left-0 bg-[#0a0c11] grid grid-cols-2 z-10 ${
+              className={`absolute top-full h-36 w-full text-[16px] left-0 bg-[#0a0c11] grid grid-cols-2 z-30 ${
                 isHovered ? "block" : "hidden"
               }`}
             >
@@ -203,7 +204,8 @@ export default function Header() {
                       <div className="text-white p-1 hover:text-[#e68a00] cursor-pointer">
                         {item.text}
                       </div>
-                    </Link>
+
+                      </Link>
                   ))}
                 {hoveredItem === "showroom" &&
                   showroomItems.slice(0, Math.ceil(showroomItems.length / 2)).map((item, index) => (
@@ -280,7 +282,7 @@ export default function Header() {
 
       {/* Нижний контейнер для десктопа */}
       <div
-        className={`bg-[#0a0c11] h-44 max-[1200px]:h-60 transition-all duration-300 bottom-container absolute left-0 right-0 top-24 ${
+        className={`bg-[#0a0c11] h-44 max-[1200px]:h-60 transition-all duration-300 bottom-container absolute z-20 left-0 right-0 top-24 ${
           isHovered ? "block" : "hidden"
         }`}
         onMouseEnter={() => setIsHovered(true)}
