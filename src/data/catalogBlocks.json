@@ -4,39 +4,39 @@
       "id": 3,
       "title": "Посудомоечная машина",
       "image": "/images/catalog/dishwasher.png",
-      "link": "link"
+      "slug": "dishwashers"
     },
     {
       "id": 1,
       "title": "Пылесос",
       "image": "/images/catalog/vacuum_cleaner.png",
-      "link": "link"
+      "slug": "vacuum-cleaner"
     },
     {
       "id": 5,
       "title": "СВЧ",
       "image": "/images/catalog/microwave.png",
-      "link": "link"
+      "slug": "microwave"
     },
 
     {
       "id": 6,
       "title": "Духовой шкаф",
       "image": "/images/catalog/oven.png",
-      "link": "link"
+      "slug": "oven"
     },
     {
       "id": 7,
       "title": "Гладильная система",
       "image": "/images/catalog/iron.png",
-      "link": "link"
+      "slug": "iron"
     },
     
     {
       "id": 10,
       "title": "Сушильная машина",
       "image": "/images/catalog/drying_machines.png",
-      "link": "link"
+      "slug": "drying-machine"
     },
     
 
@@ -44,33 +44,33 @@
       "id": 2,
       "title": "Стиральная машина",
       "image": "/images/catalog/washing_machine.png",
-      "link": "link"
+      "slug": "slug"
     },
 
     {
       "id": 4,
       "title": "Кофемашина",
       "image": "/images/catalog/coffeemachine.png",
-      "link": "link"
+      "slug": "coffee-machines"
     },
 
     {
       "id": 9,
       "title": "Холодильник",
       "image": "/images/catalog/refrigerator.png",
-      "link": "link"
+      "slug": "refrigerators"
     },
     {
       "id": 8,
       "title": "Варочная панель",
       "image": "/images/catalog/hob.png",
-      "link": "link"
+      "slug": "hob"
     },
     {
       "id": 11,
       "title": "Химия",
       "image": "/images/catalog/chemistry.png",
-      "link": "link"
+      "slug": "chemistry"
     }
   ]
 }

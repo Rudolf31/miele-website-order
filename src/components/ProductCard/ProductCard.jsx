@@ -1,12 +1,19 @@
 export default function ProductCard({ name, price, image, discount = false, novelty = false }) {
+  if (!name || !price || !image) {
+    return <div className="text-red-500">Ошибка: Неполные данные товара</div>;
+  }
+
   return (
     <div className="flex flex-col shadow-md overflow-hidden hover:shadow-lg transition-shadow">
       <div className="aspect-square relative bg-[#2B2B2B] min-h-[305px] rounded-lg mb-5 flex items-center justify-center">
-        <img 
-          src={image} 
-          alt={name}
-          className="sm:max-h-48 sm:min-h-48 min-h-80 object-cover"
-        />
+      <img 
+        src={image} 
+        alt={name}
+        className="sm:max-h-48 sm:min-h-48 min-h-80 object-cover"
+        onError={(e) => {
+          e.target.src = '/fallback-image.jpg'; // Добавьте изображение-заглушку
+        }}
+      />
         
         {/* Контейнер для кнопок с анимацией */}
         <div className="absolute top-2 right-2 z-20 group">

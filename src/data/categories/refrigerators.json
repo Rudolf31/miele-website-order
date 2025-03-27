@@ -1,0 +1,38 @@
+{
+    "category": {
+      "slug": "refrigerators",
+      "name": "Холодильники",
+      "meta": {
+        "title": "Холодильники - Магазин техники",
+        "description": "Широкий выбор холодильников"
+      }
+    },
+    "filters": [
+      {
+        "key": "freezer_volume",
+        "name": "Объем морозильной камеры",
+        "type": "checkbox",
+        "options": ["100", "150", "200"]
+      },
+      {
+        "key": "price",
+        "name": "Цена",
+        "type": "range",
+        "min": 20000,
+        "max": 150000
+      }
+    ],
+    "products": [
+      {
+        "id": 1,
+        "name": "Холодильник Deluxe",
+        "price": 80000,
+        "discount": false,
+        "novelty": true,
+        "specs": {
+          "freezer_volume": "150"
+        },
+        "image": "/fridge.jpg"
+      }
+    ]
+  }

@@ -7,5 +7,6 @@ export default {
     getNovelties: host + "/api/getNovelties",
     getBestsellers: host + "/api/getBestsellers",
     getDiscounts: host + "/api/getDiscounts",
-    getCatalogBlocks: host + "/api/getCatalogBlocks"
+    getCatalogBlocks: host + "/api/getCatalogBlocks",
+    getCategory: (slug) => `${host}/api/category/${slug}`
 }

@@ -1,0 +1,39 @@
+{
+    "category": {
+      "slug": "coffee-machines",
+      "name": "Кофемашины",
+      "meta": {
+        "title": "Кофемашины - Магазин техники",
+        "description": "Лучшие кофемашины с доставкой"
+      }
+    },
+    "filters": [
+      {
+        "key": "water_volume",
+        "name": "Объем бака воды",
+        "type": "checkbox",
+        "options": ["1.7", "2.7"]
+      },
+      {
+        "key": "price",
+        "name": "Цена",
+        "type": "range",
+        "min": 380000,
+        "max": 760000
+      }
+    ],
+    "products": [
+      {
+        "id": 1,
+        "type": "product",
+        "discount": false,
+        "novelty": true,
+        "name": "Deluxe Coffee Machine",
+        "price": 450000,
+        "image": "/images/coffeeMachine1.png",
+        "specs": {
+          "water_volume": "1.7"
+        }
+      }
+    ]
+  }

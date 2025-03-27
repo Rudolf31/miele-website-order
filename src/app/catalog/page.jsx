@@ -1,9 +1,9 @@
 "use client";
-import Header from '../components/Header/Header';
-import Footer from '../components/Footer/Footer';
+import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer';
 import { useEffect, useState } from 'react';
 import apiConfig from '../../assets/apiConfig';
-import ContactFloatingPanel from '../components/ContactFloatingPanel/ContactFloatingPanel';
+import ContactFloatingPanel from '../../components/ContactFloatingPanel/ContactFloatingPanel';
 import Link from 'next/link';
 
 export default function Catalog() {
@@ -56,38 +56,40 @@ export default function Catalog() {
           {/* Левая колонка */}
           <div className="flex-1 lg:h-full space-y-10">
             {leftColumn.map((item) => (
-              <div 
-              key={item.id}
-              className="lg:w-[500px] relative group rounded-lg overflow-hidden"
-            >
-              <img 
-                src={item.image} 
-                alt={item.title}
-                className="w-full h-auto object-contain object-left"
-              />
-              <Link href={item.link} className="absolute bottom-1/12 left-1/12 px-8 py-3 rounded-full bg-[#F59B00]">
-                <h3 className="text-xl font-semibold ">{item.title}</h3>
-              </Link>
-            </div>
-            ))}
-          </div>
-
-          {/* Правая колонка */}
-          <div className="flex-1 lg:h-full space-y-10 mt-10 lg:mt-0">
-            {rightColumn.map((item) => (
-              <div 
-                key={item.id}
-                className="lg:w-[500px] relative group rounded-lg overflow-hidden"
+              <Link 
+                key={item.id} 
+                href={`/catalog/${item.slug}`} // Изменяем здесь
+                className="lg:w-[500px] relative group rounded-lg overflow-hidden block"
               >
                 <img 
                   src={item.image} 
                   alt={item.title}
                   className="w-full h-auto object-contain object-left"
                 />
-                <Link href={item.link} className="absolute bottom-1/12 left-1/12 px-8 py-3 rounded-full bg-[#F59B00]">
-                <h3 className="text-xl font-semibold ">{item.title}</h3>
+                <div className="absolute bottom-1/12 left-1/12 px-8 py-3 rounded-full bg-[#F59B00]">
+                  <h3 className="text-xl font-semibold">{item.title}</h3>
+                </div>
               </Link>
-              </div>
+            ))}
+          </div>
+
+          {/* Правая колонка */}
+          <div className="flex-1 lg:h-full space-y-10">
+            {rightColumn.map((item) => (
+              <Link 
+                key={item.id} 
+                href={`/catalog/${item.slug}`} // Изменяем здесь
+                className="lg:w-[500px] relative group rounded-lg overflow-hidden block"
+              >
+                <img 
+                  src={item.image} 
+                  alt={item.title}
+                  className="w-full h-auto object-contain object-left"
+                />
+                <div className="absolute bottom-1/12 left-1/12 px-8 py-3 rounded-full bg-[#F59B00]">
+                  <h3 className="text-xl font-semibold">{item.title}</h3>
+                </div>
+              </Link>
             ))}
           </div>
         </div>
