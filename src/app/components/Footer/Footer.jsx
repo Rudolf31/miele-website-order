@@ -34,7 +34,7 @@ export default function Footer() {
     { href: "/returns", text: "Возврат и обмен" },
     { href: "/contacts", text: "Контакты" },
     { href: "/configurator", text: "Подборщик-комплектатор" },
-    { href: "/for-designers", text: "Дизайнерам" },
+    { href: "/toDesigners", text: "Дизайнерам" },
     { href: "/faq", text: "FAQ" }
   ];
 

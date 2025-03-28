@@ -34,7 +34,7 @@ const supportItems = [
   { text: "Доставка и оплата", href: "/support/delivery-payment" },
   { text: "Подборщик-комплектатор", href: "/support/configurator" },
   { text: "Сервис", href: "/support/service" },
-  { text: "Дизайнерам", href: "/support/for-designers" },
+  { text: "Дизайнерам", href: "toDesigners" },
   { text: "Ремонт Miele", href: "/support/miele-repair" },
   { text: "FAQ", href: "/support/faq" },
   { text: "Возврат и обмен", href: "/support/returns" },
