@@ -19,7 +19,7 @@ export default function ProductCard({ name, price, image, discount = false, nove
         <div className="absolute top-2 right-2 z-20 group">
           <div className="relative flex items-center bg-[#0A0C11] rounded-full transition-all duration-300 hover:pr-2">
             {/* Кнопка с плюсом */}
-            <button className="w-8 h-8 flex items-center justify-center text-4xl text-[#f59b00]">
+            <button className="w-8 h-8 flex items-center justify-center text-4xl -translate-y-[2px] text-[#f59b00]">
               +
             </button>
             
