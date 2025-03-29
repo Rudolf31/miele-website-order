@@ -28,7 +28,7 @@ export default function Footer() {
   ];
 
   const supportLinks = [
-    { href: "/delivery", text: "Доставка и оплата" },
+    { href: "/deliveryAndPayment", text: "Доставка и оплата" },
     { href: "/service", text: "Сервис и плата" },
     { href: "/repair", text: "Ремонт Miele" },
     { href: "/returns", text: "Возврат и обмен" },

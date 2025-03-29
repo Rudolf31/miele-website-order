@@ -31,7 +31,7 @@ const showroomItems = [
 ];
 
 const supportItems = [
-  { text: "Доставка и оплата", href: "/support/delivery-payment" },
+  { text: "Доставка и оплата", href: "/deliveryAndPayment" },
   { text: "Подборщик-комплектатор", href: "/support/configurator" },
   { text: "Сервис", href: "/support/service" },
   { text: "Дизайнерам", href: "toDesigners" },
