@@ -7,27 +7,27 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const catalogItems = [
-  { text: "Кофемашины", href: "/catalog/coffee-machines" },
-  { text: "Духовые шкафы", href: "/catalog/ovens" },
-  { text: "Холодильники", href: "/catalog/refrigerators" },
-  { text: "Варочные панели", href: "/catalog/cooktops" },
-  { text: "СВЧ", href: "/catalog/microwaves" },
-  { text: "Гладильные системы", href: "/catalog/ironing-systems" },
-  { text: "Пылесосы", href: "/catalog/vacuums" },
-  { text: "Стиральные машины", href: "/catalog/washing-machines" },
-  { text: "Химия", href: "/catalog/chemicals" },
-  { text: "Сушильные машины", href: "/catalog/dryers" },
+  { text: "Кофемашины", href: "/coffee-machines" },
+  { text: "Духовые шкафы", href: "/ovens" },
+  { text: "Холодильники", href: "/refrigerators" },
+  { text: "Варочные панели", href: "/cooktops" },
+  { text: "СВЧ", href: "/microwaves" },
+  { text: "Гладильные системы", href: "/ironing-systems" },
+  { text: "Пылесосы", href: "/vacuums" },
+  { text: "Стиральные машины", href: "/washing-machines" },
+  { text: "Химия", href: "/chemicals" },
+  { text: "Сушильные машины", href: "/dryers" },
 ];
 
 const showroomItems = [
-  { text: "Шоурум", href: "/showroom/showroom" },
-  { text: "Видео", href: "/showroom/videos" },
-  { text: "О Miele", href: "/showroom/about-miele" },
-  { text: "Обзоры", href: "/showroom/reviews" },
-  { text: "Акции", href: "/showroom/promotions" },
-  { text: "Рейтинги", href: "/showroom/ratings" },
-  { text: "Статьи", href: "/showroom/articles" },
-  { text: "Глоссарий", href: "/showroom/glossary" },
+  { text: "Шоурум", href: "/showroom" },
+  { text: "Видео", href: "/videos" },
+  { text: "О Miele", href: "/about-miele" },
+  { text: "Обзоры", href: "/reviews" },
+  { text: "Акции", href: "/promotions" },
+  { text: "Рейтинги", href: "/ratings" },
+  { text: "Статьи", href: "/articles" },
+  { text: "Глоссарий", href: "/glossary" },
 ];
 
 const supportItems = [

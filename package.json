@@ -11,11 +11,15 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.0.15",
     "framer-motion": "^12.5.0",
+    "mapbox": "^1.0.0-beta10",
+    "mapbox-gl": "^3.10.0",
     "next": "15.2.3",
     "postcss": "^8.5.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-input-mask": "^2.0.4"
+    "react-input-mask": "^2.0.4",
+    "react-leaflet": "^5.0.0",
+    "react-svg-map": "^2.2.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.0.15",
