@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function ProductCard({ name, price, image, discount = false, novelty = false }) {
   return (
     <div className="flex flex-col shadow-md overflow-hidden hover:shadow-lg transition-shadow">
@@ -11,9 +13,9 @@ export default function ProductCard({ name, price, image, discount = false, nove
         {/* Контейнер для кнопок с анимацией */}
         <div className="absolute top-2 right-2 z-20 group">
           <div className="relative flex items-center bg-[#0A0C11] rounded-full transition-all duration-300 hover:pr-2">
-            {/* Кнопка с плюсом */}
-            <button className="w-8 h-8 flex items-center justify-center -translate-y-1 text-4xl text-[#f59b00]">
-              +
+            {/* Исправленная кнопка с плюсом */}
+            <button className="w-8 h-8 flex items-center justify-center text-[#f59b00] relative">
+              <Image src="/images/iconplus.svg" alt="Plus" width={20} height={20} />
             </button>
             
             {/* Иконка пакета */}
