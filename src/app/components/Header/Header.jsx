@@ -32,13 +32,13 @@ const showroomItems = [
 
 const supportItems = [
   { text: "Доставка и оплата", href: "/deliveryAndPayment" },
-  { text: "Подборщик-комплектатор", href: "/support/configurator" },
-  { text: "Сервис", href: "/support/service" },
-  { text: "Дизайнерам", href: "toDesigners" },
-  { text: "Ремонт Miele", href: "/support/miele-repair" },
-  { text: "FAQ", href: "/support/faq" },
-  { text: "Возврат и обмен", href: "/support/returns" },
-  { text: "Контакты", href: "/support/contacts" },
+  { text: "Подборщик-комплектатор", href: "/configurator" },
+  { text: "Сервис", href: "/service" },
+  { text: "Дизайнерам", href: "/toDesigners" },
+  { text: "Ремонт Miele", href: "/repair" },
+  { text: "FAQ", href: "/faq" },
+  { text: "Возврат и обмен", href: "/returns" },
+  { text: "Контакты", href: "/contacts" },
 ];
 
 export default function Header() {
