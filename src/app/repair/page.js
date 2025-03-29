@@ -6,9 +6,9 @@ import ContactFloatingPanel from '../components/ContactFloatingPanel/ContactFloa
 
 export default function DeliveryAndPayment() {
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <Header />
-      <main className="container mx-auto px-4 font-medium">
+      <main className="container mx-auto px-4 font-medium flex-grow">
         <h1 className="text-xl font-semibold text-[#F59B00] py-20">Ремонт техники Miele</h1>
         
         <div className="grid grid-cols-1 gap-x-10 gap-y-5 mb-10">
@@ -39,6 +39,6 @@ export default function DeliveryAndPayment() {
       </main>
       <Footer />
       <ContactFloatingPanel />
-    </>
+    </div>
   );
 }
