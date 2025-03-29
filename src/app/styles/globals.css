@@ -41,6 +41,11 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: "Involve", sans-serif;
+  @apply min-h-screen flex flex-col;
+}
+
+main {
+  @apply flex-grow;
 }
 
 .container {
